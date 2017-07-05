@@ -9,7 +9,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
- * Created by sa on 1/17/2017.
+ * Created by saeid.mhd@gmail.com on 1/18/2017.
  */
 
 public interface SampleApi {

@@ -16,6 +16,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import ir.toptechnica.mahaksample.Model.Result;
 
+/**
+ * Created by saeid.mhd@gmail.com on 1/18/2017.
+ */
+
 public class DetailActivity extends AppCompatActivity {
 
     private List<Result> results = MainActivity.results;
@@ -34,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.layout);
         ButterKnife.bind(this);
 
-        //get position clicked from RecycleAdapter
+        //get position clicked from RecyclerAdapter
         Intent mIntent = getIntent();
         int intValue = mIntent.getIntExtra("position", 0);
 
@@ -59,8 +63,6 @@ public class DetailActivity extends AppCompatActivity {
         Picasso.with(this)
                 .load(results.get(intValue).getPicture().getLarge())
                 .into(iv_profile_back);
-
-
 
     }
 }

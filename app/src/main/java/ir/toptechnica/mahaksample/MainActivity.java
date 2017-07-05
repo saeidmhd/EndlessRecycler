@@ -9,7 +9,7 @@ import android.util.Log;
 import java.util.List;
 import butterknife.ButterKnife;
 import ir.toptechnica.mahaksample.Adapter.EndlessRecyclerViewScrollListener;
-import ir.toptechnica.mahaksample.Adapter.RecycleAdapter;
+import ir.toptechnica.mahaksample.Adapter.RecyclerAdapter;
 import ir.toptechnica.mahaksample.Model.Contacts;
 import ir.toptechnica.mahaksample.Model.Result;
 import ir.toptechnica.mahaksample.Remote.SampleApi;
@@ -19,12 +19,16 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Created by saeid.mhd@gmail.com on 1/18/2017.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
 
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
-    RecycleAdapter recycleAdapter;
+    RecyclerAdapter recycleAdapter;
     public static List<Result> results ;
     int current_page = 1;
 
@@ -94,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 results = response.body().getResults();
 
 
-                recycleAdapter = new RecycleAdapter(results,getApplicationContext());
+                recycleAdapter = new RecyclerAdapter(results,getApplicationContext());
                 AlphaInAnimationAdapter alphaAdapter =
                         new AlphaInAnimationAdapter
                                 (recycleAdapter);

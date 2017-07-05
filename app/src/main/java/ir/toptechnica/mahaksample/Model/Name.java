@@ -4,6 +4,10 @@ package ir.toptechnica.mahaksample.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Created by saeid.mhd@gmail.com on 1/18/2017.
+ */
+
 public class Name {
 
     @SerializedName("title")

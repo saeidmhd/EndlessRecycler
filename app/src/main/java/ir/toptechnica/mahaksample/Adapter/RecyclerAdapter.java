@@ -2,11 +2,8 @@ package ir.toptechnica.mahaksample.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +22,10 @@ import ir.toptechnica.mahaksample.R;
 
 
 /**
- * Created by sa on 1/18/2017.
+ * Created by saeid.mhd@gmail.com on 1/18/2017.
  */
 
-public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ContactViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ContactViewHolder> {
 
     private List<Result> results;
     private Context context;
@@ -62,17 +59,17 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ContactV
 
         }
     }
-    // RecycleAdapter constructor that receive results and contexts
-    public RecycleAdapter(List<Result> results, Context context) {
+    // RecyclerAdapter constructor that receive results and contexts
+    public RecyclerAdapter(List<Result> results, Context context) {
         this.results = results;
         this.context = context;
     }
 
     @Override
-    public RecycleAdapter.ContactViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerAdapter.ContactViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_view,parent,false);
-        RecycleAdapter.ContactViewHolder viewHolder = new ContactViewHolder(v);
+        RecyclerAdapter.ContactViewHolder viewHolder = new ContactViewHolder(v);
         return viewHolder;
 
     }
